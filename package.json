@@ -1,0 +1,37 @@
+{
+  "name": "promx",
+  "version": "3.0.0-beta.0",
+  "description": "safe way to handle promise in async/await",
+  "main": "dist/promx.js",
+  "types": "dist/promx.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mouafa/promx.git"
+  },
+  "keywords": [
+    "promise",
+    "async",
+    "await",
+    "error",
+    "handling"
+  ],
+  "author": "mouafa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mouafa/promx/issues"
+  },
+  "homepage": "https://github.com/mouafa/promx#readme",
+  "devDependencies": {
+    "jest": "23.10.5",
+    "ts-jest": "23.10.5",
+    "typescript": "3.3.3"
+  },
+  "files": [
+    "index.ts",
+    "dist/"
+  ]
+}
