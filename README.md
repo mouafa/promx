@@ -1,4 +1,9 @@
-const promx = require('./promx.ts').default
+# PromX
+
+a safer way to handle promise in async/await
+
+```js
+import promx from 'promx'
 
 describe('promx - resolve spec', () => {
   test('resolve nothing', async () => {
@@ -70,3 +75,4 @@ async function FailAsync() {
 function waitfor(time = 0) {
   return new Promise(resolve => setTimeout(resolve, time))
 }
+```

@@ -1,12 +1,13 @@
 {
   "name": "promx",
-  "version": "3.0.0-beta.0",
-  "description": "safe way to handle promise in async/await",
+  "version": "2.0.0-beta.0",
+  "description": "a safer way to handle promise in async/await",
   "main": "dist/promx.js",
   "types": "dist/promx.d.ts",
   "scripts": {
-    "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "lint": "tslint 'src/**/*.ts'",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -26,8 +27,10 @@
   },
   "homepage": "https://github.com/mouafa/promx#readme",
   "devDependencies": {
-    "jest": "23.10.5",
+    "jest": "23.6.0",
     "ts-jest": "23.10.5",
+    "tslint": "5.12.1",
+    "tslint-config-prettier": "1.18.0",
     "typescript": "3.3.3"
   },
   "files": [

@@ -7,4 +7,4 @@ function promx(promise: Promise<any>): Promise<[any, any]> {
   })
 }
 
-export default promx
+export = promx
