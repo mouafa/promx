@@ -1,4 +1,4 @@
-const promx = require('../src/promx.ts')
+import promx = require('../src/promx')
 
 describe('promx - resolve spec', () => {
   test('resolve nothing', async () => {
@@ -48,7 +48,7 @@ describe('promiox - reject spec', () => {
   })
 
   test('reject async', async () => {
-    const customErr = new Error({ status: 'failing' })
+    const customErr = new Error('failing')
     const [err, res] = await promx(FailAsync())
     expect(err).toEqual(customErr)
     expect(res).toBe(null)
@@ -64,7 +64,7 @@ async function successAsync() {
 
 async function FailAsync() {
   await waitfor(100)
-  throw new Error({ status: 'failing' })
+  throw new Error('failing')
 }
 
 function waitfor(time = 0) {
