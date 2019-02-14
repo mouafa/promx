@@ -1,6 +1,6 @@
 {
   "name": "promx",
-  "version": "2.0.0-beta.0",
+  "version": "2.0.0-beta.1",
   "description": "a safer way to handle promise in async/await",
   "main": "dist/promx.js",
   "types": "dist/promx.d.ts",
@@ -28,6 +28,7 @@
   "homepage": "https://github.com/mouafa/promx#readme",
   "devDependencies": {
     "@types/jest": "24.0.3",
+    "@types/jest-diff": "20.0.1",
     "jest": "23.6.0",
     "ts-jest": "23.10.5",
     "tslint": "5.12.1",
