@@ -1,0 +1,25 @@
+language: node_js
+cache:
+  directories:
+    - node_modules
+notifications:
+  email: false
+node_js:
+  - '8'
+before_script:
+  - yarn
+script:
+  - yarn test --coverage --coverageReporters=text-lcov > coverage.lcov
+after_success:
+  - npx codecov
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
+deploy:
+  provider: npm
+  email: mouafa.king@gmail.com
+  api_key:
+    secure: $NPM_TOKEN
+  on:
+    repo: mouafa/promx
+    branch: master

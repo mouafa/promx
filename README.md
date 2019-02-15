@@ -1,8 +1,6 @@
 <p align="center"><img width="auto" src="https://raw.githubusercontent.com/mouafa/promx/master/assets/cover.png"></p>
 
-# PROMX
-
-a natural/modern/safer way to handle promise in async/await
+<p align="center"> A natural/modern/safer way to handle promise in async/await </p>
 
 ## Installation
 

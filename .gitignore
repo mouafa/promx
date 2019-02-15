@@ -18,3 +18,5 @@ dist/
 *.njsproj
 *.sln
 requests.log
+coverage.lcov
+.coveralls.yml
