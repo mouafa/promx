@@ -1,7 +1,7 @@
 {
   "name": "promx",
   "version": "2.0.0-beta.3",
-  "description": "a safer way to handle promise in async/await",
+  "description": "a natural/modern/safer way to handle promise in async/await",
   "main": "dist/promx.js",
   "types": "dist/promx.d.ts",
   "scripts": {
