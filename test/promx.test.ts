@@ -26,7 +26,7 @@ describe('promx - resolve spec', () => {
   })
 })
 
-describe('promiox - reject spec', () => {
+describe('promx - reject spec', () => {
   const defaultErr = new Error('Promx Default Error')
 
   test('reject nothing', async () => {
@@ -55,15 +55,36 @@ describe('promiox - reject spec', () => {
   })
 })
 
+describe('promx - timeout option', () => {
+  const timeout = new Error('Promx Timeout Error')
+  const p = async (time: number) => await waitfor(time).then(() => 'success')
+
+  const options = {
+    timeout: 100,
+  }
+
+  test('resolve timeout error', async () => {
+    const [err, res] = await promx(successAsync(200), options)
+    expect(err).toEqual(timeout)
+    expect(res).toBe(null)
+  })
+
+  test('resolve value', async () => {
+    const [err, res] = await promx(successAsync(50), options)
+    expect(err).toBe(null)
+    expect(res).toEqual({ status: 'success' })
+  })
+})
+
 /* utility */
 
-async function successAsync() {
-  await waitfor(100)
+async function successAsync(time = 100) {
+  await waitfor(time)
   return { status: 'success' }
 }
 
-async function FailAsync() {
-  await waitfor(100)
+async function FailAsync(time = 100) {
+  await waitfor(time)
   throw new Error('failing')
 }
 
