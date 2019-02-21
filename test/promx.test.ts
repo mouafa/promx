@@ -27,11 +27,9 @@ describe('promx - resolve spec', () => {
 })
 
 describe('promx - reject spec', () => {
-  const defaultErr = new Error('Promx Default Error')
-
   test('reject nothing', async () => {
     const [err, res] = await promx(Promise.reject())
-    expect(err).toEqual(defaultErr)
+    expect(err).toEqual(promx.errors.default)
     expect(res).toBe(null)
   })
 
@@ -56,16 +54,13 @@ describe('promx - reject spec', () => {
 })
 
 describe('promx - timeout option', () => {
-  const timeout = new Error('Promx Timeout Error')
-  const p = async (time: number) => await waitfor(time).then(() => 'success')
-
   const options = {
     timeout: 100,
   }
 
   test('resolve timeout error', async () => {
     const [err, res] = await promx(successAsync(200), options)
-    expect(err).toEqual(timeout)
+    expect(err).toEqual(promx.errors.timeout)
     expect(res).toBe(null)
   })
 

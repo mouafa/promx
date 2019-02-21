@@ -21,4 +21,6 @@ interface PromxOptions {
   timeout?: number
 }
 
+promx.errors = errors
+
 export = promx
