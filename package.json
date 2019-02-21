@@ -1,6 +1,6 @@
 {
   "name": "promx",
-  "version": "2.0.1",
+  "version": "2.0.0",
   "description": "a natural/modern/safer way to handle promise in async/await",
   "main": "dist/promx.js",
   "types": "dist/promx.d.ts",
@@ -9,7 +9,8 @@
     "lint": "tslint 'src/**/*.ts'",
     "build": "tsc",
     "coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
-    "codecov": "jest --coverage --coverageReporters=text-lcov > coverage.lcov && codecov"
+    "codecov": "jest --coverage --coverageReporters=text-lcov > coverage.lcov && codecov",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",

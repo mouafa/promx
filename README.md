@@ -2,6 +2,10 @@
 
 <p align="center"> A natural/modern/safer way to handle promise in async/await </p>
 
+[![npm version](https://badge.fury.io/js/promx.svg)](https://badge.fury.io/js/promx)
+[![codecov](https://codecov.io/gh/mouafa/promx/branch/master/graph/badge.svg)](https://codecov.io/gh/mouafa/promx)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+
 ## Installation
 
 ```console
