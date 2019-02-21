@@ -17,6 +17,7 @@ branches:
   except:
     - /^v\d+\.\d+\.\d+$/
 deploy:
+  skip_cleanup: true
   provider: npm
   email: mouafa.king@gmail.com
   api_key:
